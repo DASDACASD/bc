@@ -50,7 +50,7 @@ client.on('ready', () => {
 });
                
             
-           const adminprefix = ".";
+           const adminprefix = "#";
 
 const devs = ['345386910362894336'];
 
@@ -198,7 +198,7 @@ msg.delete();
 
 client.on("message", (message) => {
 
-if (message.content === ".help") {
+if (message.content === "#help") {
 
     const embed = new Discord.RichEmbed()
 
