@@ -951,17 +951,15 @@ client.on("raw", (packet)=> {
 
 
 
-
 client.on("reachLimit", (limit)=> {
     let log = limit.guild.channels.find( channel => channel.name === "log");
-    log.send(`<@${limit.user.id}>`+"Íæá ÊåßÑ ÇáÓíÑÝÑ ÈÓ Êã ÓÍÈ ÇáÑÊÈÉ(!)");
-    limit.guild.owner.send(limit.user.username+"Íæá ÊåßÑ ÇáÓíÑÝÑ ÈÓ Êã ÓÍÈ ÇáÑÊÈÉ(!)")
+    log.send(<@${limit.user.id}>+"حول تهكر السيرفر بس تم سحب الرتبة(!)");
+    limit.guild.owner.send(limit.user.username+"حول تهكر السيرفر بس تم سحب الرتبة(!)")
     limit.member.roles.map(role => {
       limit.member.removeRole(role.id)
       .catch(log.send)
     });
   });
-
 
 	
 	
