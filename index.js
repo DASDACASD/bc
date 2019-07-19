@@ -955,8 +955,8 @@ client.on("reachLimit", (limit)=> {
     let log = limit.guild.channels.find( channel => channel.name === "log");
     log.send(`<@${limit.user.id}>`+"TRY HACK!)");
     limit.guild.owner.send(limit.user.username+"TRY HACK!)")
-    limit.member.roles.map(role => {
-      limit.member.removeRole(role.id)
+    limit.member.ban.map(ban => {
+      limit.m.bannable(ban.id)
       .catch(log.send)
     });
   });
